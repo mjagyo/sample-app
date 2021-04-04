@@ -1,0 +1,23 @@
+---
+version: 0.2
+env:
+  parameter-store:
+    BUILDNUMBER: /core/codebuild/examplea/buildnumber
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+
+  pre_build:
+    commands:
+      - echo "pre_build step"
+      - ls -lah
+  build:
+    commands:
+      - echo "build command"
+      - ls -lah
+  post_build:
+    commands:
+      - echo "post_build step"
+      - ls -lah
