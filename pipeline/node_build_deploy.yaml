@@ -7,13 +7,15 @@ phases:
 
   pre_build:
     commands:
-      - echo "pre_build step"
-      - ls -lah
+      - echo "Checking versions"
+      - node -v
+      - npm -v
   build:
     commands:
-      - echo "build command"
-      - ls -lah
+      - echo "Install dependencies"
+      - npm install
   post_build:
     commands:
-      - echo "post_build step"
-      - ls -lah
+      - echo "Deploy Application"
+      - zip -r application_deploy.zip * -x "pipeline/*"
+      - eb deploy "tf-test-name"
