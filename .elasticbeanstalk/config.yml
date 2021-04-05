@@ -1,3 +1,0 @@
-deploy:
-  artifact: application_deploy.zip
-  
