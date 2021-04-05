@@ -7,7 +7,7 @@ phases:
 
   pre_build:
     commands:
-      - echo "Checking versions"
+      - echo "Checking dependencies versions"
       - node -v
       - npm -v
   build:
