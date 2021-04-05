@@ -22,3 +22,4 @@ artifacts:
   files:
     - 'application_deploy.zip'
   name: new-app-build
+  s3-prefix: viseo
